@@ -1,21 +1,11 @@
 # DBS-Seed-TechTrek3-Hackathon-Team-1
 
 
-NavBar
-/navbar
-Luyao
-Login page
-/login
-Gavin
-View Wallet balance
-/wallet-balance
-Cassey
-Current Pricing Asset
-/current-pricing
-Cheryl
-Historical Pricing Asset
-/historical-pricing
-Cheryl
+NavBar: Luyao
+Login page: Gavin
+View Wallet balance: Cassey
+Current Pricing Asset: Cheryl
+Historical Pricing Asset: Cheryl
 View Transaction History
 /transaction-history
 Luyao
