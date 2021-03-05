@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { WalletBalance } from './components/WalletBalance';
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -18,12 +19,12 @@ function App() {
         <Route exact path="/">
           <Redirect to="/login" />
         </Route>
-        <Route path="/current-pricing">
+        <PrivateRoute path="/current-pricing">
             <CurrentPricing />
-        </Route>
-        <Route path="/wallet-balance">
+        </PrivateRoute>
+        <PrivateRoute path="/wallet-balance">
             <WalletBalance />
-        </Route>
+        </PrivateRoute>
       </Switch>
     </Router>
   );

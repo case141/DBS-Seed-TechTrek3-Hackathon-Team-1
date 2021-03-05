@@ -12,7 +12,7 @@ function CurrentPricing() {
       {},
       {
         headers: {
-          'x-api-key': 'WOaw4WPY1H7Vy7bqAQDoeaa4HX0VWq7b5oYRYzYA'
+          'x-api-key': 'dgkCTGTaXm7HYZNgyizLY4ocEVSO7G3c54QcYSIu'
         }
       }
     )
@@ -41,7 +41,7 @@ function CurrentPricing() {
   return (
     <Card style={{ width: '18rem' }}>
   <Card.Body>
-    <Card.Title>{`$${currentPrice.price}`}</Card.Title>
+    <Card.Title>{`${currentPrice.price}`}</Card.Title>
     <Card.Text>
       {currentPrice.assetSymbol}
     </Card.Text>
