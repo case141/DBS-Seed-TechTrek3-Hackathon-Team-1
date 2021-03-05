@@ -1,6 +1,6 @@
 # DBS-Seed-TechTrek3-Hackathon-Team-1
 
-
+Pages Team Members In Charge of:
 ##### NavBar: Luyao<br>
 ##### Login page: Gavin<br>
 ##### View Wallet balance: Cassey<br>
