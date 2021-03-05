@@ -1,5 +1,7 @@
 # DBS-Seed-TechTrek3-Hackathon-Team-1
 
+### Heroku Link: https://powerful-ridge-23117.herokuapp.com/historical-pricing
+
 ### Pages Team Members In Charge of:
 ##### NavBar: Luyao<br>
 ##### Login page: Gavin<br>
