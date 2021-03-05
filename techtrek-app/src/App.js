@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { WalletBalance } from './components/wallet-balance';
+import { WalletBalance } from './components/WalletBalance';
 
 function App() {
   return (
