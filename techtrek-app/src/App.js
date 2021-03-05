@@ -4,14 +4,15 @@ import CurrentPricing from './components/CurrentPrice/CurrentPricing';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { WalletBalance } from './components/WalletBalance';
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
       <div>
-        hello
       </div>
       <Switch>
+        <Navbar />
         <Route path="/current-pricing">
             <CurrentPricing />
         </Route>
