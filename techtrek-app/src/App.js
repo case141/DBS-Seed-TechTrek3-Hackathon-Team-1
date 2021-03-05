@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import CurrentPricing from './components/CurrentPrice/CurrentPricing';
+import HistoricalPricing from './components/CurrentPrice/HistoricalPricing';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/current-pricing">
-            <CurrentPricing />
+            <HistoricalPricing />
         </Route>
       </Switch>
     </Router>

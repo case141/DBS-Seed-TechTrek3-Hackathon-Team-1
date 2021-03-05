@@ -3,6 +3,23 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {Card } from 'react-bootstrap'
 import './index.css'
+
+function getCurrentPrice()
+{
+  axios.post(
+    'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current',
+    {},
+    {
+      headers: {
+        'x-api-key': 'dgkCTGTaXm7HYZNgyizLY4ocEVSO7G3c54QcYSIu'
+      }
+    }
+  )
+  .then ( function (res) {
+    return res.data
+  })
+}
+
 function CurrentPricing() {
   const [currentPrice, setCurrentPrice] = useState({})
 
@@ -19,8 +36,9 @@ function CurrentPricing() {
     .then ( function (res) {
       setCurrentPrice(res.data)
     })
-    setInterval(() => {
-      data = axios.post(
+    
+    const timeInterval = setInterval(() => {
+      let data = axios.post(
         'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current',
         {},
         {
@@ -29,12 +47,11 @@ function CurrentPricing() {
           }
         }
       )
-      .then (function (res) {
+      .then ( function (res) {
         setCurrentPrice(res.data)
       })
-
-
-    }, (60 * 1000))
+    }, (10000000000000000000000000000000000 * 1000)) // 60 * 1000
+    return () => clearInterval(interval);
   }, [])
 
   return (
