@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import {
   Nav,
   NavbarContainer,
@@ -15,7 +15,13 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle }) => { 
+  const history = useHistory();
+  const handleLogout = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    history.replace('/login');
+  }
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
@@ -72,65 +78,12 @@ const Navbar = ({ toggle }) => {
                     Transaction
                   </Link>
                 </li>
+                <li className="nav-item" style={{ cursor: 'pointer' }}>
+                  <a onClick={handleLogout} className="nav-link">
+                    Sign Out
+                  </a>
+                </li>
               </ul>
-                {/* <NavLinks
-                  to="/wallet-balance"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  View Wallet Balance
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="currentPricingAsset"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Current Pricing Asset
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="historicalPricing"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Historical Pricing
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="pastTransaction"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Past Transaction
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="buy-sell-asset"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Buy Sell Asset
-                </NavLinks> */}
             </NavMenu>
             <NavBtn>
               <NavBtnLink to="/login">Login</NavBtnLink>
