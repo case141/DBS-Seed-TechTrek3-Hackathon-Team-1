@@ -14,9 +14,10 @@ import HistoricalPricing from "./components/CurrentPrice/HistoricalPricing";
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar />
-      </div>
+      <Switch>
+        <Route path="/login" />
+        <Route path="/" component={Navbar} />
+      </Switch>
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route exact path="/">

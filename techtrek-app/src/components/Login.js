@@ -33,6 +33,13 @@ export default class Login extends Component {
       if (res.status === 200) {
         localStorage.setItem('isLoggedIn', true);
         localStorage.setItem('accountKey', res.data['accountKey']);
+        localStorage.setItem('address', res.data['address']);
+        localStorage.setItem('email', res.data['email']);
+        localStorage.setItem('firstName', res.data['firstName']);
+        localStorage.setItem('lastName', res.data['lastName']);
+        localStorage.setItem('nric', res.data['nric']);
+        localStorage.setItem('phoneNumber', res.data['phoneNumber']);
+        localStorage.setItem('username', res.data['username']);
         this.props.history.replace(`/wallet-balance`);
       }
     } catch (err) {

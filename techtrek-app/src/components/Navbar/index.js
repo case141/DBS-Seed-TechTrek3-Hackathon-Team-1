@@ -45,22 +45,34 @@ const Navbar = ({ toggle }) => {
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
-            <NavMenu>
-                <NavItem>
-                  <Link to='/buy-sell-asset'>BuySellAsset</Link>
-                </NavItem>
-                <NavItem>
-                <Link to='/wallet-balance' >WalletBalance</Link>
-                </NavItem>
-                <NavItem>
-                <Link to='/current-pricing' >CurrentPricing</Link>
-                </NavItem>
-                <NavItem>
-                <Link to='/transaction' >Transaction</Link>
-                </NavItem>
-                <NavItem>
-                <Link to='/historical-pricing' >HistoricalPricing</Link>
-                </NavItem>
+            <NavMenu> 
+              <ul className="nav nav-tabs bg-dark">
+                <li className="nav-item">
+                  <Link to="/buy-sell-asset" className="nav-link">
+                    Buy and Sell Asset
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/wallet-balance" className="nav-link">
+                    Wallet Balance
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/current-pricing" className="nav-link">
+                    Current Pricing
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/historical-pricing" className="nav-link">
+                    Historical Pricing
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/transaction" className="nav-link">
+                    Transaction
+                  </Link>
+                </li>
+              </ul>
                 {/* <NavLinks
                   to="/wallet-balance"
                   smooth={true}
@@ -121,7 +133,7 @@ const Navbar = ({ toggle }) => {
                 </NavLinks> */}
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/signin">Sign In</NavBtnLink>
+              <NavBtnLink to="/login">Login</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

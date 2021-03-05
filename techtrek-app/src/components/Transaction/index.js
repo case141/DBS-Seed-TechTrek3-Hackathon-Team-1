@@ -7,6 +7,7 @@ const Transaction = () => {
   const [transaction, setTransaction] = useState([]);
 
   useEffect(() => {
+    const accountKey = localStorage.getItem( 'accountKey' );
       fetch(
         "https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/view",
         {
@@ -15,7 +16,7 @@ const Transaction = () => {
             "x-api-key": "dgkCTGTaXm7HYZNgyizLY4ocEVSO7G3c54QcYSIu",
           },
           body: JSON.stringify({
-            accountKey: "b60212f0-46fb-41fb-aa38-2d609a36a419",
+            accountKey
           }),
         }
       )
