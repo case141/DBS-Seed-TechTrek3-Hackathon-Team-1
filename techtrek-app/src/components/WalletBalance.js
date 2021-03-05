@@ -15,7 +15,7 @@ export function WalletBalance() {
       },
       {
         headers: {
-          'x-api-key':  'dgkCTGTaXm7HYZNgyizLY4ocEVSO7G3c54QcYSIu'
+          'x-api-key':  'WOaw4WPY1H7Vy7bqAQDoeaa4HX0VWq7b5oYRYzYA'
         }
       }
     ).then (function (res) {
