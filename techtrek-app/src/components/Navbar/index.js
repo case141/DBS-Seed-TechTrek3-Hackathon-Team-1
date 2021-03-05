@@ -39,7 +39,7 @@ const Navbar = ({ toggle }) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              Hello
+              DBS SEED
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
@@ -47,50 +47,50 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="about"
+                  to="currentPricingAsset"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  About
+                  Current Pricin Asset
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="discover"
+                  to="historicalPricing"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Discover
+                  Historical Pricing
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="services"
+                  to="pastTransaction"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Services
+                  Past Transaction
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="signup"
+                  to="buySellAsset"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Sign Up
+                  Buy Sell Asset
                 </NavLinks>
               </NavItem>
             </NavMenu>
