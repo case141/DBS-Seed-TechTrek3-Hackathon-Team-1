@@ -22,8 +22,13 @@ export default class Login extends Component {
       username: this.state.username,
       password: this.state.password,
     };
+    const config = {
+      headers: {
+        'x-api-key': "WOaw4WPY1H7Vy7bqAQDoeaa4HX0VWq7b5oYRYzYA"
+      }
+    }
     try {
-      const res = await axios.post('/api/login', data);
+      const res = await axios.post('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/login', data , config);
       console.log(res);
       if (res.status === 200) {
         localStorage.setItem('isLoggedIn', true);
