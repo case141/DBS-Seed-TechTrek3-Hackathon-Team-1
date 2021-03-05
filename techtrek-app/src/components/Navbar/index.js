@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from 'react-router-dom'
 import {
   Nav,
   NavbarContainer,
@@ -35,7 +36,7 @@ const Navbar = ({ toggle }) => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
+      <IconContext.Provider  value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
@@ -45,8 +46,22 @@ const Navbar = ({ toggle }) => {
               <FaBars />
             </MobileIcon>
             <NavMenu>
-              <NavItem>
-                <NavLinks
+                <NavItem>
+                  <Link to='/buy-sell-asset'>BuySellAsset</Link>
+                </NavItem>
+                <NavItem>
+                <Link to='/wallet-balance' >WalletBalance</Link>
+                </NavItem>
+                <NavItem>
+                <Link to='/current-pricing' >CurrentPricing</Link>
+                </NavItem>
+                <NavItem>
+                <Link to='/transaction' >Transaction</Link>
+                </NavItem>
+                <NavItem>
+                <Link to='/historical-pricing' >HistoricalPricing</Link>
+                </NavItem>
+                {/* <NavLinks
                   to="/wallet-balance"
                   smooth={true}
                   duration={500}
@@ -95,7 +110,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="buySellAsset"
+                  to="buy-sell-asset"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -103,8 +118,7 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                 >
                   Buy Sell Asset
-                </NavLinks>
-              </NavItem>
+                </NavLinks> */}
             </NavMenu>
             <NavBtn>
               <NavBtnLink to="/signin">Sign In</NavBtnLink>

@@ -29,7 +29,7 @@ export default class Login extends Component {
     }
     try {
       const res = await axios.post('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/login', data , config);
-      console.log(res);
+      console.log(res.data);
       if (res.status === 200) {
         localStorage.setItem('isLoggedIn', true);
         localStorage.setItem('accountKey', res.data['accountKey']);

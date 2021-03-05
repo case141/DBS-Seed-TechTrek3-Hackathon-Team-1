@@ -24,7 +24,9 @@
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react-line-graph": "^1.0.6",
+    "recharts": "^2.0.8"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",

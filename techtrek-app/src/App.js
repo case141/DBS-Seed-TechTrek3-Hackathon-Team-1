@@ -6,7 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { WalletBalance } from './components/WalletBalance';
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
+import BuySellAsset from "./components/BuySellAsset";
+import Transaction from "./components/Transaction/index";
 import PrivateRoute from "./components/PrivateRoute";
+import HistoricalPricing from "./components/CurrentPrice/HistoricalPricing";
 
 function App() {
   return (
@@ -19,11 +22,20 @@ function App() {
         <Route exact path="/">
           <Redirect to="/login" />
         </Route>
-        <PrivateRoute path="/current-pricing">
+        <PrivateRoute exact path="/buy-sell-asset" component={BuySellAsset} >
+            <BuySellAsset />
+        </PrivateRoute>
+        <PrivateRoute exact path="/transaction" component={Transaction} >
+            <Transaction />
+        </PrivateRoute>
+        <PrivateRoute exact path="/current-pricing">
             <CurrentPricing />
         </PrivateRoute>
-        <PrivateRoute path="/wallet-balance">
+        <PrivateRoute exact path="/wallet-balance" component={WalletBalance}>
             <WalletBalance />
+        </PrivateRoute>
+        <PrivateRoute exact path="/historical-pricing" component={HistoricalPricing}>
+            <HistoricalPricing />
         </PrivateRoute>
       </Switch>
     </Router>
