@@ -47,7 +47,7 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="wallet-balance"
+                  to="/wallet-balance"
                   smooth={true}
                   duration={500}
                   spy={true}

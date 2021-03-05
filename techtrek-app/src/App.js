@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <div>
+        <Navbar />
       </div>
       <Switch>
-        <Navbar />
         <Route path="/current-pricing">
             <CurrentPricing />
         </Route>
