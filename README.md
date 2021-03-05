@@ -12,7 +12,8 @@
 ##### View Transaction History: Luyao<br>
 ##### Buy Sell Asset: Viriya<br>
 
-
+How we did the challenge:
+We coded each page on our own local react-app then we used google drive to upload our code. One person will then git commit and merge everything manually.
 
 
 
